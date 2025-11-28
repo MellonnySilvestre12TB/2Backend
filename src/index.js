@@ -7,7 +7,9 @@ const {DATABASE_HOST, DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD} = process
 const app = express()
 const port = 3333
 
-app.use(cors())
+app.use(cors({
+    origin: "*"
+}))
 app.use(express.json())
 
 //Simbolo do objeto no java são as chaves {}
